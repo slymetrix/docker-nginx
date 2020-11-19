@@ -47,6 +47,7 @@ RUN set -eux; \
     mkdir -m 0755 conf; \
     ln -sf /etc/nginx/conf/nginx.conf /etc/nginx/nginx.conf; \
     mkdir -m 0755 -p /etc/nginx/conf/certs; \
+    ln -sf /etc/nginx/conf/certs /etc/nginx/certs; \
     chmod +x /docker-entrypoint.d/99-fix-permissions.sh; \
     # Configure logrotate
     rm -f /etc/logrotate.d/acpid; \
