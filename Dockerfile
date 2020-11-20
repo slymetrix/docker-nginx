@@ -1,4 +1,4 @@
-FROM nginx:1.19-alpine
+FROM slymetrixdev/nginx-brotli:latest
 
 COPY scripts/run-cron.sh /docker-entrypoint.d/99-run-cron.sh
 COPY scripts/geoip.sh /docker-entrypoint.d/10-geoip.sh
